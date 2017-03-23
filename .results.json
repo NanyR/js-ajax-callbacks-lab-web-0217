@@ -1,0 +1,95 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2017-03-23T20:47:36.213Z",
+    "end": "2017-03-23T20:47:37.155Z",
+    "duration": 942
+  },
+  "tests": [
+    {
+      "title": "has the right elements",
+      "fullTitle": "index.js index.html has the right elements",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "registers a userDetails partial",
+      "fullTitle": "index.js handlebars registers a userDetails partial",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "sets the errors div content",
+      "fullTitle": "index.js displayError sets the errors div content",
+      "duration": 15,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "calls out to the github search API and displays results",
+      "fullTitle": "index.js ajax functions searchRepositories calls out to the github search API and displays results",
+      "duration": 39,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "calls the github commits api and displays results",
+      "fullTitle": "index.js ajax functions showCommits calls the github commits api and displays results",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {
+        "stack": "TypeError: Cannot read property 'respond' of undefined\n    at Context.it (test/index-test.js:76:20)",
+        "message": "Cannot read property 'respond' of undefined"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "calls the github commits api and displays results",
+      "fullTitle": "index.js ajax functions showCommits calls the github commits api and displays results",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {
+        "stack": "TypeError: Cannot read property 'respond' of undefined\n    at Context.it (test/index-test.js:76:20)",
+        "message": "Cannot read property 'respond' of undefined"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "has the right elements",
+      "fullTitle": "index.js index.html has the right elements",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "registers a userDetails partial",
+      "fullTitle": "index.js handlebars registers a userDetails partial",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "sets the errors div content",
+      "fullTitle": "index.js displayError sets the errors div content",
+      "duration": 15,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "calls out to the github search API and displays results",
+      "fullTitle": "index.js ajax functions searchRepositories calls out to the github search API and displays results",
+      "duration": 39,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}

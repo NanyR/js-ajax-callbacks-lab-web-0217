@@ -21,6 +21,12 @@
   <body>
     <main id="main">
       <div id="errors"></div>
+      <div class="search">
+        <form >
+        <input type="text" name="search" id="searchTerms">
+        <a href="#" id="searchName">Search</a>
+        </form>
+      </div>
     </main>
     <div class="flexbox-container">
       <div>
@@ -35,5 +41,42 @@
     <script src="jquery-3.1.0.min.js"></script>
     <script src="handlebars.js"></script>
     <script src="index.js"></script>
+    <script id="repository-template" type="text/x-handlebars-template">
+      <ul>
+      {{#each this.items}}
+      {{> userDetails owner}}
+        <li>
+            <a href="{{html_url}}"><h2>{{name}}</h2></a>
+            {{#if description}}
+            <p>{{description}}</p>
+            {{/if}}
+            <a href='#'  id="commits" data-repo={{owner.login}} data-name={{name}} onclick="getCommits()">Show Commits</a>
+        </li>
+      {{/each}}
+    </ul>
+    </script>
+      <script id="user-details-partial" type="text/x-handlebars-template">
+      <section>
+        <header><h4>Created By: {{login}}</h4></header>
+        <img src="{{avatar_url}}" height="32" width="32">
+      </section>
+    </script>
+    <script id="error-template" type="text/x-handlebars-template">
+        <h3>I'm sorry, there's been an error. Please try again.</h3>
+        <p>{{statusText}}</p>
+    </script>
+    <script id="commits-template" type="text/x-handlebars-template">
+      <ul>
+        {{#each this}}
+          <li>
+            <p>SHA {{sha}}</p>
+            <p>{{commit.author.name}}</p>
+                <p>{{commit.message}}</p>
+            <p>{{author.login}}</p>
+            <img src="{{author.avatar_url}}" height="32" width="32">
+          </li>
+        {{/each}}
+      </ul>
+    </script>
   </body>
 </html>
